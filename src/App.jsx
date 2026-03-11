@@ -1,21 +1,93 @@
 
 import './App.css'
+import ToDo from './ToDo'
 
 function App() {
 
+  const tasks = [
+    { task: "Wake up early", isDone: true },
+    { task: "Brush teeth", isDone: false },
+    { task: "Take a shower", isDone: true },
+    { task: "Eat breakfast", isDone: false },
+    { task: "Study JavaScript", isDone: true },
+    { task: "Practice coding", isDone: false },
+    { task: "Watch programming tutorial", isDone: false },
+    { task: "Build a small project", isDone: false },
+    { task: "Read a programming book", isDone: false },
+    { task: "Exercise for 30 minutes", isDone: true },
+    { task: "Update GitHub project", isDone: false },
+    { task: "Buy groceries", isDone: true },
+    { task: "Plan tomorrow's tasks", isDone: false },
+    { task: "Eat dinner", isDone: false },
+    { task: "Go to sleep", isDone: true }
+  ];
 
   return (
     <>
 
-      <h1>Vite + React</h1>
-      <Device name="iPhone 16" brand="apple" price="$1000"></Device>
-      <Device name="samsung s22" brand="samsung" price="$800"></Device>
-      <Device name="Laptop" brand="" price="$1500"></Device>
+      <h1>React</h1>
 
-      <Developer name= "Abul" tech = "JS" experience = "5 years"></Developer>
-      <Developer name= "Mobul" tech = "python" experience = "3 years"></Developer>
-      <Developer name= "Kobul" tech = "Java" experience = "7 years"></Developer>
+
+
+      <ul>
+
+        {tasks.map((t, index) => (
+
+          <ToDo key={index} task ={t.task} isDone = {t.isDone} />))}
+
+      </ul>
+
+
+
+      {/* <ToDo task = "Watch programming tutorial" isDone = {true}></ToDo>
+      <ToDo task = "Build a small project" isDone = {false}></ToDo>
+      <ToDo task = "Practice coding" isDone = {true}></ToDo>
+      <ToDo task = "Eat dinner" isDone = {false}></ToDo>
+      <ToDo task = "Buy groceries" isDone = {false}></ToDo>
+      <ToDo task = "Wake up early" isDone = {true}></ToDo> */}
+
+      {/* <Book name = "Atomic Habits" category = "Self Development" createDate = "2020"></Book>
+      <Book name = "Clean Code" category = "Programming" createDate = "2008"></Book>
+      <Book name = "The Alchemist" category = "Novel" createDate = "1988"></Book> */}
+
+
+      {/* <Cricketer name = "Sakib al hasan" runs = "8000" wicket = "500"></Cricketer>
+      <Cricketer name = "Tamim iqbal " runs = "12000" ></Cricketer>
+      <Cricketer name = "Mustafizur Rahman"  wicket = "600"></Cricketer>
+      <Cricketer  wicket = "100" runs= "2000"></Cricketer> */}
+
+
     </>
+  )
+}
+
+
+
+function Book({ name, category, createDate }) {
+
+  return (
+
+    <div className='device-box'>
+
+      <h1>Book</h1>
+
+      <p>Name :{name} </p>
+      <p>Category: {category} </p>
+      <p>Create date : {createDate}</p>
+    </div>
+  )
+}
+
+function Cricketer({ name = "guest", runs = 0, wicket = 0 }) {
+
+  return (
+
+    <div className='device-box'>
+
+      <p>Name : {name}</p>
+      <p>Runs : {runs}</p>
+      <p>Wicket : {wicket}</p>
+    </div>
   )
 }
 
