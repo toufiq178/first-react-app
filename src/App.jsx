@@ -8,14 +8,54 @@ function App() {
     <>
 
       <h1>Vite + React</h1>
-      <Paragraph></Paragraph>
-      <About></About>
-      <Sports></Sports>
-      <Pet></Pet>
+      <Device name="iPhone 16" brand="apple" price="$1000"></Device>
+      <Device name="samsung s22" brand="samsung" price="$800"></Device>
+      <Device name="Laptop" brand="" price="$1500"></Device>
 
+      <Developer name= "Abul" tech = "JS" experience = "5 years"></Developer>
+      <Developer name= "Mobul" tech = "python" experience = "3 years"></Developer>
+      <Developer name= "Kobul" tech = "Java" experience = "7 years"></Developer>
     </>
   )
 }
+
+
+function Device(props) {
+
+  return (
+
+    <div className='device-box'>
+
+      <p>Name : {props.name}</p>
+      <p>Brand : {props.brand}</p>
+      <p>Price : {props.price}</p>
+
+    </div>
+
+  )
+}
+
+function Developer(props) {
+
+
+  const developerStyle = {
+
+    color: "yellow",
+    border: "5px solid red",
+    borderRadius: "20px",
+    padding: "10px",
+    margin: "10px"
+  }
+
+  return (
+    <div style={developerStyle}>
+      <p>Name : {props.name}</p>
+      <p>Technology : {props.tech}</p>
+      <p>Experience : {props.experience}</p>
+    </div>
+  )
+}
+
 
 function Paragraph() {
 
@@ -55,7 +95,7 @@ function Sports() {
 
 
 function Pet() {
-  
+
   return (
     <div>
       <h1>pets</h1>

@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+.device-box{
+  
+  border-radius: 20px;
+  border: 5px solid salmon;
+  font-size: 20px;
+  padding: 15px;
+  margin: 10px;
+  text-align: left;
+}
