@@ -1,25 +1,37 @@
 
 import './App.css'
 import ToDo from './ToDo'
+import Actors from './Actors';
+import Singer from './Singers';
 
 function App() {
 
-  const tasks = [
-    { task: "Wake up early", isDone: true },
-    { task: "Brush teeth", isDone: false },
-    { task: "Take a shower", isDone: true },
-    { task: "Eat breakfast", isDone: false },
-    { task: "Study JavaScript", isDone: true },
-    { task: "Practice coding", isDone: false },
-    { task: "Watch programming tutorial", isDone: false },
-    { task: "Build a small project", isDone: false },
-    { task: "Read a programming book", isDone: false },
-    { task: "Exercise for 30 minutes", isDone: true },
-    { task: "Update GitHub project", isDone: false },
-    { task: "Buy groceries", isDone: true },
-    { task: "Plan tomorrow's tasks", isDone: false },
-    { task: "Eat dinner", isDone: false },
-    { task: "Go to sleep", isDone: true }
+  // const tasks = [
+  //   { task: "Wake up early", isDone: true },
+  //   { task: "Brush teeth", isDone: false },
+  //   { task: "Take a shower", isDone: true },
+  //   { task: "Eat breakfast", isDone: false },
+  //   { task: "Study JavaScript", isDone: true },
+  //   { task: "Practice coding", isDone: false },
+  //   { task: "Watch programming tutorial", isDone: false },
+  //   { task: "Build a small project", isDone: false },
+  //   { task: "Read a programming book", isDone: false },
+  //   { task: "Exercise for 30 minutes", isDone: true },
+  //   { task: "Update GitHub project", isDone: false },
+  //   { task: "Buy groceries", isDone: true },
+  //   { task: "Plan tomorrow's tasks", isDone: false },
+  //   { task: "Eat dinner", isDone: false },
+  //   { task: "Go to sleep", isDone: true }
+  // ];
+
+  // const actors = ["Shakib Khan","Chanchal Chowdhury","Dev","Jeet","Salman Khan"];
+
+  const singers = [
+    { id: 1, name: "Arijit Singh", age: 37, country: "India" },
+    { id: 2, name: "Atif Aslam", age: 41, country: "Pakistan" },
+    { id: 3, name: "Shreya Ghoshal", age: 40, country: "India" },
+    { id: 4, name: "Tahsan Khan", age: 44, country: "Bangladesh" },
+    { id: 5, name: "James", age: 59, country: "Bangladesh" }
   ];
 
   return (
@@ -28,14 +40,24 @@ function App() {
       <h1>React</h1>
 
 
+        {
 
-      <ul>
+          singers.map(singer => <Singer singer={singer}></Singer>)
+        }
+
+
+      {/* {
+
+          actors.map((actor , index) => <Actors key={index} actor={actor}></Actors>)
+        } */}
+
+      {/* <ul>
 
         {tasks.map((t, index) => (
 
           <ToDo key={index} task ={t.task} isDone = {t.isDone} />))}
 
-      </ul>
+      </ul> */}
 
 
 
