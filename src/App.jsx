@@ -3,6 +3,7 @@ import './App.css'
 import ToDo from './ToDo'
 import Actors from './Actors';
 import Singer from './Singers';
+import Sports from './Sports';
 
 function App() {
 
@@ -26,13 +27,54 @@ function App() {
 
   // const actors = ["Shakib Khan","Chanchal Chowdhury","Dev","Jeet","Salman Khan"];
 
-  const singers = [
-    { id: 1, name: "Arijit Singh", age: 37, country: "India" },
-    { id: 2, name: "Atif Aslam", age: 41, country: "Pakistan" },
-    { id: 3, name: "Shreya Ghoshal", age: 40, country: "India" },
-    { id: 4, name: "Tahsan Khan", age: 44, country: "Bangladesh" },
-    { id: 5, name: "James", age: 59, country: "Bangladesh" }
+  // const singers = [
+  //   { id: 1, name: "Arijit Singh", age: 37, country: "India" },
+  //   { id: 2, name: "Atif Aslam", age: 41, country: "Pakistan" },
+  //   { id: 3, name: "Shreya Ghoshal", age: 40, country: "India" },
+  //   { id: 4, name: "Tahsan Khan", age: 44, country: "Bangladesh" },
+  //   { id: 5, name: "James", age: 59, country: "Bangladesh" }
+  // ];
+
+  const sports = [
+    {
+      id: 1,
+      name: "Football",
+      players: 11,
+      country: "Brazil",
+      popularPlayer: "Lionel Messi"
+    },
+    {
+      id: 2,
+      name: "Cricket",
+      players: 11,
+      country: "India",
+      popularPlayer: "Virat Kohli"
+    },
+    {
+      id: 3,
+      name: "Basketball",
+      players: null,
+      country: "USA",
+      popularPlayer: "LeBron James"
+    },
+    {
+      id: 4,
+      name: "Tennis",
+      players: 2,
+      country: "Switzerland",
+      popularPlayer: "Roger Federer"
+    },
+    {
+      id: 5,
+      name: "",
+      players: 2,
+      country: "China",
+      popularPlayer: "Lin Dan"
+    }
   ];
+
+
+
 
   return (
     <>
@@ -40,10 +82,24 @@ function App() {
       <h1>React</h1>
 
 
-        {
+
+
+      {
+
+        sports.map(sport => <Sports key={sport.id} sport = {sport}></Sports>)
+      }
+
+
+
+
+
+
+
+
+      {/* {
 
           singers.map(singer => <Singer singer={singer}></Singer>)
-        }
+        } */}
 
 
       {/* {
@@ -172,20 +228,20 @@ function About() {
   )
 }
 
-function Sports() {
+// function Sports() {
 
-  return (
+//   return (
 
-    <div>
-      <h1>Sports</h1>
-      <ul>
-        <li>football</li>
-        <li>cricket</li>
-        <li>basket ball</li>
-      </ul>
-    </div>
-  )
-}
+//     <div>
+//       <h1>Sports</h1>
+//       <ul>
+//         <li>football</li>
+//         <li>cricket</li>
+//         <li>basket ball</li>
+//       </ul>
+//     </div>
+//   )
+// }
 
 
 function Pet() {
